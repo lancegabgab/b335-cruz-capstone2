@@ -8,7 +8,7 @@ const orderRoutes = require("./routes/order");
 
 
 //port
-const port = 4004;
+const port = 4000;
 
 const cors = require("cors");
 const app = express();
@@ -32,10 +32,10 @@ app.get("b4", (req, res) => {
 res.send("Hello world")
 })
 
-app.use("/b4/users", userRoutes);
-app.use("/b4/products", productRoutes);
-app.use("/b4/cart", cartRoutes);
-app.use("/b4/order", orderRoutes);
+app.use("/users", userRoutes);
+app.use("/products", productRoutes);
+app.use("/cart", cartRoutes);
+app.use("/order", orderRoutes);
 
 
 //this is the routes for testing the not Deployed in AWS version
